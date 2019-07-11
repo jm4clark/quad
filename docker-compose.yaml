@@ -19,7 +19,9 @@ services:
       image: localhost:5000/my/server:latest
       build:
         context: ./server
-        dockerfile: Dockerfile
+        dockerfile: Dockerfile        
+      ports:
+      - "8081:8080"
     client:
       image: localhost:5000/my/client:latest
       build:
